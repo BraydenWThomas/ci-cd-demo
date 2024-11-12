@@ -27,5 +27,7 @@ jobs:
           pip install -r requirements.txt
 
       - name: Run Tests
+        env:
+          PYTHONPATH: . # Add this line to include the current directory
         run: |
           pytest
